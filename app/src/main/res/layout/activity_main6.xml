@@ -10,7 +10,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RVBooks2"
         android:layout_width="408dp"
-        android:layout_height="640dp" />
+        android:layout_height="553dp"
+        tools:layout_editor_absoluteY="98dp" />
 
     <Button
         android:id="@+id/myorder_to_home_btn"
@@ -22,5 +23,16 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RVBooks2" />
+
+    <TextView
+        android:id="@+id/my_orders_page"
+        android:layout_width="400dp"
+        android:layout_height="81dp"
+        android:text="My Orders"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

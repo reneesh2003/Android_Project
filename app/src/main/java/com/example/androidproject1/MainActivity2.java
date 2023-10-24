@@ -18,7 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
     private ArrayList<UserModel> UserModelArrayList;
     EditText userEmail;
     EditText userPassword;
-    Button loginBtn;
+    Button loginBtn,registerBtn;
     private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,16 @@ public class MainActivity2 extends AppCompatActivity {
         userPassword=findViewById(R.id.user_password);
         loginBtn=findViewById(R.id.login_btn);
         UserModelArrayList = new ArrayList<>();
+        registerBtn=findViewById(R.id.redirect_to_registeration);
+
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // opening a new activity via a intent.
+                Intent i = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

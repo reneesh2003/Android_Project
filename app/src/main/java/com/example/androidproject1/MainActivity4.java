@@ -15,7 +15,7 @@ public class MainActivity4 extends AppCompatActivity {
     EditText InputAuthor;
     EditText InputQuantity;
     EditText InputPrice;
-    Button SubmitBookBtn;
+    Button SubmitBookBtn,cancelBtn;
     private DBHandler dbHandler;
 
 
@@ -30,8 +30,16 @@ public class MainActivity4 extends AppCompatActivity {
         InputQuantity=findViewById(R.id.enter_quantity);
         InputPrice=findViewById(R.id.enter_price);
         SubmitBookBtn=findViewById(R.id.submit_Book_btn);
+        cancelBtn=findViewById(R.id.cancel_add_book);
         dbHandler = new DBHandler(MainActivity4.this);
-
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backtohome = new Intent(MainActivity4.this, MainActivity5.class);
+                backtohome.putExtra("user", user);
+                startActivity(backtohome);
+            }
+        });
         SubmitBookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

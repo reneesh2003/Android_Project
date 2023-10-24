@@ -9,17 +9,19 @@
     <!--recycler view for displaying our courses-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RVBooks1"
-        android:layout_width="401dp"
-        android:layout_height="628dp" />
+        android:layout_width="405dp"
+        android:layout_height="548dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/my_books_page" />
 
     <Button
         android:id="@+id/add_book_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:text="Add Book"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/RVBooks1" />
 
@@ -28,11 +30,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:text="Home"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toEndOf="@+id/add_book_btn"
         app:layout_constraintTop_toBottomOf="@+id/RVBooks1" />
+
+    <TextView
+        android:id="@+id/my_books_page"
+        android:layout_width="403dp"
+        android:layout_height="75dp"
+        android:text="My Books"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="2dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
